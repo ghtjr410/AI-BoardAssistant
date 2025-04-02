@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: api
+
+  web:
+    resources:
+      add-mappings: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/AI_BoardAssistant?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    username: root
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  logging:
+    level:
+      org.hibernate.SQL: debug
+      org.hibernate.type.descriptor.sql.BasicBinder: trace
